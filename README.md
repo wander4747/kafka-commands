@@ -24,3 +24,20 @@ Ver informações de um topic
 ```sh
 kafka-topics --bootstrap-server=localhost:9092 --topic=test --describe
 ```
+
+### Consumer e Producer
+
+Criando consumer
+```sh
+kafka-console-consumer --bootstrap-server=localhost:9092 --topic=test
+```
+
+Criando consumer lendo mensagem "iniciais"
+```sh
+kafka-console-consumer --bootstrap-server=localhost:9092 --topic=test --from-beginning
+```
+
+Criando producer
+```sh
+kafka-console-producer --bootstrap-server=localhost:9092 --topic=test
+```
