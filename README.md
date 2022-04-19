@@ -32,7 +32,7 @@ Criando consumer
 kafka-console-consumer --bootstrap-server=localhost:9092 --topic=test
 ```
 
-Criando consumer lendo mensagem "iniciais"
+Criando consumer lendo mensagem iniciais
 ```sh
 kafka-console-consumer --bootstrap-server=localhost:9092 --topic=test --from-beginning
 ```
@@ -40,4 +40,15 @@ kafka-console-consumer --bootstrap-server=localhost:9092 --topic=test --from-beg
 Criando producer
 ```sh
 kafka-console-producer --bootstrap-server=localhost:9092 --topic=test
+```
+
+### Group
+
+Criando consumer com grupo(rode o comando mais de uma vez para ver o funcionamento)
+```sh
+kafka-console-consumer --bootstrap-server=localhost:9092 --topic=test --group=x
+```
+Ver informações de um group
+```sh
+kafka-consumer-groups --bootstrap-server=localhost:9092 --group=x --describe
 ```
